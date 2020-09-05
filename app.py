@@ -12,7 +12,7 @@ from PIL import Image
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 st.title("SENTIMENT ANALYSIS")
-image=Image.open('Pic.png')
+image=Image.open('pic.png')
 st.image(image,width=800)
 
 from sklearn.model_selection import train_test_split
