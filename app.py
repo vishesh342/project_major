@@ -28,11 +28,11 @@ X=data.iloc[:,1]
 y=data['Sentiment']
 xtrain,xtest,ytrain,ytest=train_test_split(X,y,test_size=0.3,random_state=0)
 cv = TfidfVectorizer()
-xtrain_tr = cv.fit_transform(xtrain)
+xtrain_tr = cv.fit_transform(xtrain[:10000])
 xtest_tr= cv.transform(xtest)
 from sklearn.linear_model import LogisticRegression
 clf=LogisticRegression()
-clf.fit(xtrain_tr,ytrain)
+clf.fit(xtrain_tr,ytrain[:10000])
 
 
 
