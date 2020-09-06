@@ -17,7 +17,7 @@ st.image(image,width=800)
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
-data=pd.read_csv('Reviews.csv')
+data=pd.read_csv('https://media.githubusercontent.com/media/vishesh342/project_major/master/Reviews.csv')
                                             
 data.drop(['Id','ProductId','UserId','ProfileName','Time','Text','HelpfulnessNumerator','HelpfulnessDenominator'],axis=1,inplace=True)
 data.dropna(axis=0,inplace=True)
